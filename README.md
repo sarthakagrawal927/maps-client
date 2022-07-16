@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Maps
 
-## Getting Started
+## About the project
 
-First, run the development server:
+Created to have a map for every item, starting off with rental properties. Users will be able to add entries for all sorts of stuff, including:
+1) Where sceneries are great
+2) Where food is great ( not all places can be listed on Zomato )
+3) Where to go to see the sunset
+4) Which area is lit
 
-```bash
-npm run dev
-# or
-yarn dev
+And they can create new categories as they wish. I won't be doing much for Auth ( next-auth - google-auth will just do fine)
+
+## Purpose
+
+1) Build a cool full stack project from scratch using completely new technologies
+2) Have fun
+3) If people start to use it, get interesting locations ;)
+4) Deployment, publicity etc.
+
+New things I wanted to try
+
+### Leaflet.js
+
+Leaflet.js did not work for me. It needed dynamic import with SSR turned off to access the window object. I was not happy with results so I removed it. Will explore alternate map libraries
+
+```ts
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+
+const WorldMap = () => {
+    return (
+        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+            <TileLayer
+                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <Marker position={[51.505, -0.09]}>
+                <Popup>
+                    A pretty CSS3 popup. <br /> Easily customizable.
+                </Popup>
+            </Marker>
+        </MapContainer>
+    );
+};
+
+export default WorldMap;
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### EUI
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+EUI makes the website surprisingly slower, it added approximately 2s delay to the page load. Hence removed it as well.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### React-query
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Working well as of now.
 
-## Learn More
+### Animate.css
 
-To learn more about Next.js, take a look at the following resources:
+Seemed very basic and not worth using.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Bulletproof React
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Strong opinionated react-architecture, wanted to do things from scratch so skipped it as well.
 
-## Deploy on Vercel
+### MobX-Tree
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Still thinking whether I will need a state management library so jury is still out.

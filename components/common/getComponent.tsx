@@ -1,6 +1,7 @@
 // PURPOSE : TESTING GET APIs
 import PropTypes, { InferProps } from 'prop-types';
 import { useQuery } from 'react-query';
+import { JSONTree } from 'react-json-tree';
 
 const GetComponentPropTypes = {
     getReqHandler: PropTypes.shape({
@@ -15,14 +16,9 @@ const GetComponent = ({ getReqHandler }: InferProps<typeof GetComponentPropTypes
     if (isLoading) return <>Loading...</>
     if (error) return <>{`ERROR: ${JSON.stringify(error)} `}</>
 
-    return (
-        <div>
-            {JSON.stringify(data)}
-        </div>
-    );
+    return <JSONTree data={data} />
 };
 
 GetComponent.propTypes = GetComponentPropTypes
-
 
 export default GetComponent;
