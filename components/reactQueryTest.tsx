@@ -7,15 +7,6 @@ const ReactQueryTest = () => {
         <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
         <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
         <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
-        <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
-        <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
-        <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
-        <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
-        <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
-        <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
-        <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
-        <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
-        <GetComponent getReqHandler={REACT_QUERY_KEYS.TEST} />
     </>
 };
 

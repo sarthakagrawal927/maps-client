@@ -17,6 +17,8 @@ And they can create new categories as they wish. I won't be doing much for Auth 
 3) If people start to use it, get interesting locations ;)
 4) Deployment, publicity etc.
 
+DUE TO LACK OF NICE MAP LIBRARY THE PROJECT ON PAUSE INDEFINITELY
+
 New things I wanted to try
 
 ### Leaflet.js
@@ -44,6 +46,10 @@ const WorldMap = () => {
 
 export default WorldMap;
 ```
+### Google Maps & Mapbox Maps
+
+Both are pricy, not sure whether I want to use them. And are a bit difficult to customize to my needs. So I'll continue my search on.
+
 
 ### EUI
 
