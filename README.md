@@ -48,6 +48,7 @@ export default WorldMap;
 ### EUI
 
 EUI makes the website surprisingly slower, it added approximately 2s delay to the page load. Hence removed it as well.
+Will be using Tailwind.css now.
 
 ### React-query
 
